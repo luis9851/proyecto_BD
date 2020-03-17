@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
+const session=require('express-session');
 //Initializations
 const app=express();
 //Settings
@@ -16,7 +17,12 @@ app.engine('.hbs',exphbs({
 app.set('view engine', '.hbs');
 //Middlewares
 app.use(express.urlencoded({extended:false}));
-app.use(methodOverride())
+app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'mysecretapp',
+    resave: true,
+    saveUninitialized:true
+}));
 
 //Global Variables
 
