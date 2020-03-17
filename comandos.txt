@@ -8,3 +8,10 @@ git push -u origin master
 --Empujar un repositorio existente desde la línea de comando
 git remote add origin https://github.com/luis9851/proyecto_BD.git
 git push -u origin master
+///////////////////////////////////////
+npm init
+npm install express --save
+npm install mongodb --save
+npm install mysql --save
+npm install nodemon
+npm install node
