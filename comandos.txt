@@ -9,9 +9,9 @@ git push -u origin master
 git remote add origin https://github.com/luis9851/proyecto_BD.git
 git push -u origin master
 ///////////////////////////////////////
-npm init
-npm install express --save
-npm install mongodb --save
-npm install mysql --save
-npm install nodemon
-npm install node
+-npm init --yes
+
+-npm install express express-handlebars express-session method-override mongoose passport passport-local bcryptjs connect-flash
+
+
+///////////////////////////////
