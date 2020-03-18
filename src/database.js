@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 //////////////////////////////////////nombre de la base de datos
-mongoose.connect('mongodb://localhost/notes-db-app',{
+mongoose.connect('mongodb://localhost/Codellege',{
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
