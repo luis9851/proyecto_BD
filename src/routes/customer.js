@@ -82,9 +82,8 @@ router.get('/customer/search/searchbyCountry/:country', async(req, res) => {
     console.log(res.params.country);
     res.render('customer/searchCustomers', { customers });
 });
-
 //-----------------------------Terminar esta parte --------------------------
-
+//6
 router.get('/customer/rentals', async(req, res) => {
     const acollection = Listings.collection.collectionName;
     const look = await Customer.aggregate([{
@@ -107,5 +106,16 @@ router.get('/customer/hola', async(req, res) => {
     }]);
     res.json(look);
 });
-
+//7
+router.get('/customer/reportRe', async(req,res)=>{
+    const acollection = Listings.collection.collectionName;
+    const lis = await Listings.find({$where:"this.idCustomer>0"});
+    res.json(lis);
+});
+//9
+router.get('/customer/reportRe', async(req,res)=>{
+    const acollection = Listings.collection.collectionName;
+    const lis = await Listings.find({$and:[{"price":{$gte:80}},{"price":{$lte:5000}}]});
+    res.json(lis);
+});
 module.exports = router;
