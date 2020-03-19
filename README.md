@@ -1,3 +1,6 @@
+///////
+  Alumnos: Luis Gerardo Loera Pasillas (180614) y Edgar Eduardo Estrada Calvillo (181455).
+///////
 --crea un nuevo repositorio en la línea de comando
 echo "# proyecto_BD" >> README.md 
 git init 
