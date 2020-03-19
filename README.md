@@ -12,6 +12,5 @@ git push -u origin master
 npm init
 npm install express --save
 npm install mongodb --save
-npm install mysql --save
 npm install nodemon
 npm install node
