@@ -1,0 +1,49 @@
+<div class="row">
+  {{#each customers}}
+  <div class="col-md-12">
+    <div class="card m-4">
+      <div class="card-body">
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          FirstName : {{ FirstName }} 
+        </h4>
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          LastName : {{ LastName }} 
+        </h4>
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          Address : {{ address }} 
+        </h4>
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          City : {{ city }} 
+        </h4>
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          Country : {{ country }} 
+        </h4>
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          District : {{ district }} 
+        </h4>
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          Status : {{ status }} 
+        </h4>
+        <h4>
+            <a href="/customer/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+        </h4>
+
+        <!-- DELETE REQUEST -->
+        <form action="/customer/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <div class="card mx-auto">
+    <div class="card-body">
+      <p class="lead">No hay customers</p>
+      <a href="/customer/add" class="btn btn-success btn-block">Añadir un nuevo customer</a>
+    </div>
+  </div>
+  {{/each}}
+</div>
