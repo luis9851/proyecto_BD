@@ -1,0 +1,44 @@
+{{#each errors}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         {{text}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{{/each}}
+
+<div class="col-md-4 mx-auto">
+    <div class="card">
+    <div class="card-header">
+        Añadir Customer
+    </div>
+    <div class="card-body">
+       <form action="/customer/newCustomer" method="POST">
+            <div class="form-group">
+                <input type="text" name="FirstName" class="form-control" placeholder="FirstName"> 
+            </div>
+            <div class="form-group">
+                <input type="text" name="LastName" class="form-control" placeholder="LastName">
+            </div>
+            <div class="form-group">
+                <input type="text" name="address" class="form-control" placeholder="address">
+            </div>
+            <div class="form-group">
+                <input type="text" name="city" class="form-control" placeholder="city">
+            </div>
+            <div class="form-group">
+                <input type="text" name="country" class="form-control" placeholder="country">
+            </div>
+            <div class="form-group">
+                <input type="text" name="district" class="form-control" placeholder="district">
+            </div>
+            <div class="form-group">
+                <input type="text" name="status" class="form-control" placeholder="Activo/Inactivo">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">Guardar</button>
+            </div>
+       </form>
+    </div>
+</div>
+</div>
