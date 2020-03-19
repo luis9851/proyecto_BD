@@ -125,4 +125,11 @@ router.get('/customer/hola', async(req, res) => {
     res.json(look);
 });
 
+//9
+router.get('/customer/reportRe', async(req,res)=>{
+    const acollection = Listings.collection.collectionName;
+    const lis = await Listings.find({$and:[{"price":{$gte:80}},{"price":{$lte:5000}}]});
+    res.json(lis);
+});
+
 module.exports = router;

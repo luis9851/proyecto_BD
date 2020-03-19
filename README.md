@@ -14,3 +14,8 @@ npm install express --save
 npm install mongodb --save
 npm install nodemon
 npm install node
+//////////////////////////////////////
+Punto 11
+esta en la direccion src\models y ejecutamos el comando
+node Backup.js 
+se creara una carpeta en C: ya mada backup que contendra el respaldo de la BD
