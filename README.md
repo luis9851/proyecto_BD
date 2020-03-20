@@ -1,3 +1,6 @@
+///////
+  Alumnos: Luis Gerardo Loera Pasillas (180614) y Edgar Eduardo Estrada Calvillo (181455).
+///////
 --crea un nuevo repositorio en la línea de comando
 echo "# proyecto_BD" >> README.md 
 git init 
@@ -12,6 +15,11 @@ git push -u origin master
 npm init
 npm install express --save
 npm install mongodb --save
-npm install mysql --save
 npm install nodemon
 npm install node
+//////////////////////////////////////
+Punto 11
+esta en la direccion src\models y ejecutamos el comando
+npm i child_process 
+node Backup.js 
+se creara una carpeta en C: ya mada backup que contendra el respaldo de la BD
