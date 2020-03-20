@@ -179,8 +179,8 @@ router.get('/customer/act/:id', async(req, res) => {
 });
 
 router.put('/customer/newactivo/:id', async(req, res) => {
-    const {status} = req.body;
-    await Customer.findByIdAndUpdate(req.params.id, {status});
+    var sta={"status":"Inactivo"}
+    await Customer.findByIdAndUpdate(req.params.id, sta);
     req.flash('success_msg', 'Customer Actualizado');
     res.redirect('/customer');
 });
