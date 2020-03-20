@@ -124,9 +124,50 @@ router.get('/customer/hola', async(req, res) => {
     }]);
     res.json(look);
 });
-
+//8
+router.get('/customer/report8', async(req,res)=>{
+    const acollection = Listings.collection.collectionName;
+    const lis = await Listings.find({$or:[        
+    {property_type:"Aparthotel"},
+    {property_type:"Apartment"},
+    {property_type:"Barn"},
+    {property_type:"Bed and breakfast"},
+    {property_type:"Boat"},
+    {property_type:"Boutique hotel"},
+    {property_type:"Bungalow"},
+    {property_type:"Cabin"},
+    {property_type:"Camper/RV"},
+    {property_type:"Campsite"},
+    {property_type:"Casa particular (Cuba)"},
+    {property_type:"Castle"},
+    {property_type:"Chalet"},
+    {property_type:"Condominium"},
+    {property_type:"Cottage"},
+    {property_type:"Earth house"},
+    {property_type:"Farm stay"},
+    {property_type:"Guest suite"},
+    {property_type:"Guesthouse"},
+    {property_type:"Heritage hotel (India)"},
+    {property_type:"Hostel"},
+    {property_type:"Hotel"},
+    {property_type:"House"},
+    {property_type:"Houseboat"},
+    {property_type:"Hut"},
+    {property_type:"Loft"},
+    {property_type:"Nature lodge"},
+    {property_type:"Other"},
+    {property_type:"Pension (South Korea)"},
+    {property_type:"Resort"},
+    {property_type:"Serviced apartment"},
+    {property_type:"Tiny house"},
+    {property_type:"Townhouse"},
+    {property_type:"Train"},
+    {property_type:"Treehouse"},
+    {property_type:"Villa"}]});
+    res.json(lis);
+});
 //9
-router.get('/customer/reportRe', async(req,res)=>{
+router.get('/customer/report9', async(req,res)=>{
     const acollection = Listings.collection.collectionName;
     const lis = await Listings.find({$and:[{"price":{$gte:80}},{"price":{$lte:5000}}]});
     res.json(lis);
