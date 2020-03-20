@@ -180,7 +180,7 @@ router.get('/customer/act/:id', async(req, res) => {
 
 router.put('/customer/newactivo/:id', async(req, res) => {
     var sta={"status":"Inactivo"}
-    await Customer.findByIdAndUpdate(req.params.id, {sta});
+    await Customer.findByIdAndUpdate(req.params.id, sta);
     req.flash('success_msg', 'Customer Actualizado');
     res.redirect('/customer');
 });
