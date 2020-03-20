@@ -1,7 +1,7 @@
 {
   "name": "proyecto_BD",
   "version": "1.0.0",
-  "description": "",
+  "description": "///////\r   Alumnos: Luis Gerardo Loera Pasillas (180614) y Edgar Eduardo Estrada Calvillo (181455).\r ///////\r --crea un nuevo repositorio en la línea de comando\r echo \"# proyecto_BD\" >> README.md \r git init \r git add README.md \r git commit -m \"first commit\" \r git remote add origin https://github.com/luis9851/proyecto_BD.git\r git push -u origin master\r --Empujar un repositorio existente desde la línea de comando\r git remote add origin https://github.com/luis9851/proyecto_BD.git\r git push -u origin master\r ///////////////////////////////////////\r npm init\r npm install express --save\r npm install mongodb --save\r npm install nodemon\r npm install node\r //////////////////////////////////////\r Punto 11\r esta en la direccion src\\models y ejecutamos el comando\r npm i child_process \r node Backup.js \r se creara una carpeta en C: ya mada backup que contendra el respaldo de la BD",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
