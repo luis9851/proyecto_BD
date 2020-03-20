@@ -172,5 +172,17 @@ router.get('/customer/report9', async(req,res)=>{
     const lis = await Listings.find({$and:[{"price":{$gte:80}},{"price":{$lte:5000}}]});
     res.json(lis);
 });
+//10
+router.get('/customer/act/:id', async(req, res) => {
+    const customer = await Customer.findById(req.params.id);
+    res.render('customer/newactivo', {customer});
+});
+
+router.put('/customer/newactivo/:id', async(req, res) => {
+    const {status} = req.body;
+    await Customer.findByIdAndUpdate(req.params.id, {status});
+    req.flash('success_msg', 'Customer Actualizado');
+    res.redirect('/customer');
+});
 
 module.exports = router;
